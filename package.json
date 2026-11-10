@@ -1,0 +1,120 @@
+{
+  "name": "vue3-admin-template",
+  "version": "2.13.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit & vite build",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "lint:eslint": "eslint  --fix --ext .ts,.js,.vue ./src ",
+    "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix",
+    "lint:lint-staged": "lint-staged",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.3",
+    "@element-plus/icons-vue": "^2.3.2",
+    "@logicflow/core": "^2.2.5",
+    "@vueuse/core": "^15.0.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.21.0",
+    "element-plus": "^2.14.8",
+    "lodash-es": "^4.18.1",
+    "nprogress": "^0.2.0",
+    "path-browserify": "^1.0.1",
+    "path-to-regexp": "^9.0.0",
+    "pinia": "^4.1.0",
+    "qs": "^6.17.1",
+    "three": "^0.187.0",
+    "vue": "^3.5.45",
+    "vue-i18n": "11.4.18",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@iconify-json/ep": "^1.2.4",
+    "@types/node": "^26.6.6",
+    "@types/lodash-es": "^4.17.12",
+    "@types/nprogress": "^0.2.3",
+    "@types/path-browserify": "^1.0.3",
+    "@types/qs": "^6.15.1",
+    "@types/three": "^0.187.0",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vitejs/plugin-vue-jsx": "^5.1.6",
+    "autoprefixer": "^10.6.2",
+    "commitizen": "^4.3.2",
+    "cz-git": "^1.14.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-vue": "^10.12.0",
+    "fast-glob": "^3.3.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "postcss": "^8.5.32",
+    "postcss-html": "^2.0.0",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.9.10",
+    "sass": "^1.108.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-html": "^2.0.0",
+    "stylelint-config-recess-order": "^7.10.0",
+    "stylelint-config-recommended": "^18.0.0",
+    "stylelint-config-recommended-scss": "^17.0.1",
+    "stylelint-config-recommended-vue": "^2.0.0",
+    "stylelint-config-standard": "^40.0.0",
+    "terser": "^5.51.2",
+    "typescript": "~5.7.2",
+    "unocss": "^66.12.0",
+    "unplugin-auto-import": "^21.1.0",
+    "unplugin-icons": "^24.0.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^8.3.6",
+    "vite-plugin-mock-dev-server": "^2.7.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vue-tsc": "^3.3.14"
+  },
+  "repository": "http://172.23.105.167/liujun/vue3-admin-template.git",
+  "author": "liujun",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
